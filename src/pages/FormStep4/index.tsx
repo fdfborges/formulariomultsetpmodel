@@ -4,7 +4,7 @@ import { useForm, FormActions } from '../../contexts/FormContext';
 import { Theme } from '../../components/Theme';
 import { ChangeEvent, useEffect } from 'react';
 import { Resume } from '../../components/Resume';
-
+import { Steps } from '../../components/Steps/Steps';
 
 
 export const FormStep4 = () => {
@@ -12,8 +12,8 @@ export const FormStep4 = () => {
     const { state, dispatch } = useForm();
 
     useEffect(() => {
-        if (state.name === '' || state.email === '' || state.level === 0 || state.github === '') {
-            navigate('/');
+        if (state.name === '' || state.email === '' || state.github === '') {
+            navigate('/step3');
             console.log(state);
         };
 
@@ -48,7 +48,7 @@ export const FormStep4 = () => {
     return (
         <Theme>
             <C.Container>
-                <p>Passo {state.currentStep}/3</p>
+                <Steps />
                 <h1>{state.name}, confirme suas informações!</h1>
                 <p>Garanta que preencheu os dados corretamente para ter mais chances de coonseguir um trabalho.</p>
 

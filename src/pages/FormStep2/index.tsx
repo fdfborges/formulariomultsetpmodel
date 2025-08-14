@@ -4,6 +4,7 @@ import { useForm, FormActions } from '../../contexts/FormContext';
 import { Theme } from '../../components/Theme/';
 import { ChangeEvent, useEffect } from 'react';
 import { SelectOption } from '../../components/SelectOption';
+import { Steps } from '../../components/Steps/Steps';
 
 
 
@@ -24,6 +25,7 @@ export const FormStep2 = () => {
 
     const handleNextStep = () => {
         if (state.name !== "") {
+            console.log(state.level)
             navigate("/step3");
         } else {
             alert("Preencha os dados!");
@@ -37,7 +39,7 @@ export const FormStep2 = () => {
         })
     }
 
-    const setLevel = (level: number) => {
+    const setLevel = (level: string) => {
         dispatch({
             type: FormActions.setLevel,
             payload: level
@@ -47,7 +49,7 @@ export const FormStep2 = () => {
     return (
         <Theme>
             <C.Container>
-                <p>Passo {state.currentStep}/3</p>
+                <Steps />
                 <h1>{state.name}, o que melhor descreve você?</h1>
                 <p>Escolha a opção que melhor descreve seu estado?</p>
 
@@ -57,16 +59,16 @@ export const FormStep2 = () => {
                     title="Sou iniciante"
                     description="Comecei a programar em menos de 2 anos."
                     icon="💂‍♂️"
-                    selected={state.level === 0}
-                    onClick={() => setLevel(0)}
+                    selected={state.level === "iniciante"}
+                    onClick={() => setLevel("iniciante")}
                 />
 
                 <SelectOption
                     title="Sou programador"
                     description="Já programo a 2 anos ou mais"
                     icon="👀"
-                    selected={state.level === 1}
-                    onClick={() => setLevel(1)}
+                    selected={state.level === "profissional"}
+                    onClick={() => setLevel("profissional")}
                 />
 
                 <Link className='backButton' to={"/"}>Voltar</Link>

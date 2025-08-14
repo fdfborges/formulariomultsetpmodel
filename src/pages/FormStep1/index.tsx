@@ -3,6 +3,7 @@ import * as C from './styles';
 import { useForm, FormActions } from '../../contexts/FormContext';
 import { Theme } from '../../components/Theme/';
 import { ChangeEvent, useEffect } from 'react';
+import { Steps } from '../../components/Steps/Steps';
 
 
 
@@ -18,9 +19,9 @@ export const FormStep1 = () => {
     }, []);
 
     const handleNextStep = () => {
-        if(state.name !== ""){
+        if (state.name !== "") {
             navigate("/step2");
-        } else{
+        } else {
             alert("Preencha os dados!");
         }
     }
@@ -35,7 +36,7 @@ export const FormStep1 = () => {
     return (
         <Theme>
             <C.Container>
-                <p>Passo {state.currentStep}/3</p>
+                <Steps />
                 <h1>Vamos começar com seu nome</h1>
                 <p>Preencha o campo abaixo com seu nome completo:</p>
 

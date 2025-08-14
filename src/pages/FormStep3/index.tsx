@@ -2,8 +2,10 @@ import { useNavigate, Link } from 'react-router';
 import * as C from './styles';
 import { useForm, FormActions } from '../../contexts/FormContext';
 import { Theme } from '../../components/Theme/';
-import { ChangeEvent, useEffect } from 'react';
-
+import { useEffect } from 'react';
+import { object, string } from 'yup';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Steps } from '../../components/Steps/Steps';
 
 
 export const FormStep3 = () => {
@@ -13,66 +15,66 @@ export const FormStep3 = () => {
     useEffect(() => {
         if (state.name === '') {
             navigate('/');
-        };
-
-        dispatch({
-            type: FormActions.setCurrentStep,
-            payload: 3
-        });
-    }, []);
-
-    const handleNextStep = () => {
-        if (state.email !== '' && state.github !== '') {
-            navigate('/step4')
-        }else {
-            alert("Preencha os dados!");
+        } else {
+            dispatch({
+                type: FormActions.setCurrentStep,
+                payload: 3
+            });
         }
-    }
+    }, [dispatch, navigate, state.name]);
 
-    const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const validationSchema = object({
+        email: string().email('Formato de E-mail Inválido').required('Campo obrigatório'),
+        github: string().url('URL Inválida').required('Campo obrigatório')
+    });
+
+    const handleFormSubmit = (values: { email: string; github: string; }) => {
         dispatch({
             type: FormActions.setEmail,
-            payload: e.target.value
-        })
-    }
-
-    const handleGithubChange = (e: ChangeEvent<HTMLInputElement>) => {
+            payload: values.email
+        });
         dispatch({
             type: FormActions.setGithub,
-            payload: e.target.value
-        })
-    }
+            payload: values.github
+        });
+        navigate('/step4');
+    };
 
     return (
         <Theme>
             <C.Container>
-                <p>Passo {state.currentStep}/3</p>
+                <Steps />
                 <h1>Legal {state.name}! Onde te achamos?</h1>
-                <p>Preencha com seus contatos para conseguirmos entrar em cotnato:</p>
+                <p>Preencha com seus contatos para conseguirmos entrar em contato:</p>
 
                 <hr />
 
-                <label>
-                    Qual seu e-mail?
-                    <input
-                        type="email"
-                        value={state.email}
-                        onChange={handleEmailChange}
-                    />
-                </label>
+                <Formik
+                    initialValues={{
+                        email: state.email,
+                        github: state.github
+                    }}
+                    validationSchema={validationSchema}
+                    onSubmit={handleFormSubmit}
+                >
+                    <Form>
+                        <label>
+                            Qual seu e-mail?
+                            <Field name="email" type="email" autoFocus />
+                            <ErrorMessage name="email" component="div" className="error-message" />
+                        </label>
 
-                <label>
-                    Qual seu Github?
-                    <input
-                        type="url"
-                        value={state.github}
-                        onChange={handleGithubChange}
-                    />
-                </label>
+                        <label>
+                            Qual seu Github?
+                            <Field name="github" type="url" />
+                            <ErrorMessage name="github" component="div" className="error-message" />
+                        </label>
 
+                        <Link className='backButton' to={"/step2"}>Voltar</Link>
+                        <button type='submit'>Próximo</button>
+                    </Form>
+                </Formik>
 
-                <Link className='backButton' to={"/step4"}>Voltar</Link>
-                <button onClick={handleNextStep}>Finalizar Cadastro</button>
             </C.Container>
         </Theme>
     )
