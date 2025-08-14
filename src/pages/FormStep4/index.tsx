@@ -12,8 +12,8 @@ export const FormStep4 = () => {
     const { state, dispatch } = useForm();
 
     useEffect(() => {
-        if (state.name === '') {
-            // navigate('/');
+        if (state.name === '' || state.email === '' || state.level === 0 || state.github === '') {
+            navigate('/');
             console.log(state);
         };
 
@@ -54,7 +54,7 @@ export const FormStep4 = () => {
 
                 <hr />
 
-                <Resume icon="👤"/>
+                <Resume icon="👤" />
 
                 <Link className='backButton' to={"/"}>Voltar</Link>
                 <button onClick={handleNextStep}>Enviar</button>

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 import { ReactComponent as ProfileIcon } from '../../Svgs/profile.svg';
 import { ReactComponent as BookIcon } from '../../Svgs/book.svg';
 import { ReactComponent as MailIcon } from '../../Svgs/mail.svg';
+import { ReactComponent as SendIcon } from '../../Svgs/send.svg';
 
 type Props = {
     title: string;
@@ -30,6 +31,9 @@ export const SidebarItem = ({ title, description, icon, path, active }: Props) =
                     }
                     {icon === 'mail' &&
                         <MailIcon fill="white" width={24} height={24} />
+                    }
+                    {icon === 'resume' &&
+                        <SendIcon fill="white" width={24} height={24} />
                     }
                 </C.IconArea>
                 <C.Point active={active}></C.Point>

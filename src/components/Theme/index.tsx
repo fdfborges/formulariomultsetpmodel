@@ -39,6 +39,12 @@ export const Theme = ({ children }: Props) => {
                             icon="mail"
                             path="/step3"
                             active={state.currentStep === 3} />
+                        <SidebarItem
+                            title="Finalização"
+                            description="Confirmação dos dados"
+                            icon="resume"
+                            path="/step4"
+                            active={state.currentStep === 4} />
                     </C.Sidebar>
                     <C.Page>
                         {children}
