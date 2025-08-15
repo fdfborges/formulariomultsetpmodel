@@ -32,8 +32,9 @@ export const Sidebar = styled.div`
     border-right: 1px solid #16195C;
     @media (max-width: 768px){
         display: flex;
+        align-items: center;
+        justify-content: space-around;
         width: 90%;
-        border: 1px solid red;
     }
 `;
 

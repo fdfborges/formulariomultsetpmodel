@@ -9,14 +9,17 @@ export const Container = styled.div`
             display: flex;    
             align-items: center;
             justify-content: center;
-            border: 1px solid purple;
-            gap: 2rem;
+            gap: 10rem;
+            
+            
+
             
             .containerLink{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+
             }
     }
 
@@ -46,7 +49,6 @@ export const Title = styled.div`
         align-items: center;
         justify-content: center;
         text-align: center;
-        border: 1px solid red;
         
     }
 `;
@@ -57,11 +59,12 @@ export const Description = styled.div`
     color: #B8B8D4;
 
     @media (max-width: 768px){
+        min-height: 3rem;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        border: 1px solid red;
+        display: none;
         
     }
 
