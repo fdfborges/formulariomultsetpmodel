@@ -48,4 +48,10 @@ export const Container = styled.div`
         cursor: pointer;
         margin-top: 30px;
     }
+
+    @media (max-width: 768px){
+        width: 100%
+        
+    }
+
 `;

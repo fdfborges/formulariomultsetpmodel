@@ -17,7 +17,7 @@ type Props = {
 export const SidebarItem = ({ title, description, icon, path, active }: Props) => {
     return (
         <C.Container>
-            <Link to={path}>
+            <Link className='containerLink' to={path}>
                 <C.Info>
                     <C.Title>{title}</C.Title>
                     <C.Description>{description}</C.Description>

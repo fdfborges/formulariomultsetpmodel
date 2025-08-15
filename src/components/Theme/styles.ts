@@ -17,11 +17,24 @@ export const Area = styled.div`
 export const Steps = styled.div`
     flex: 1;
     display: flex;
+    
+    @media (max-width: 768px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
 `;
 
 export const Sidebar = styled.div`
     width: 250px;
     border-right: 1px solid #16195C;
+    @media (max-width: 768px){
+        display: flex;
+        width: 90%;
+        border: 1px solid red;
+    }
 `;
 
 export const Page = styled.div`
