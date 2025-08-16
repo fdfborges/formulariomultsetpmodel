@@ -15,6 +15,9 @@ export const Area = styled.div`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    @media (max-width: 768px){
+        min-height: 100%;
+    }
 `;
 
 export const Steps = styled.div`
@@ -47,7 +50,7 @@ export const Page = styled.div`
 
     @media (max-width: 768px){
         padding-left: 0px;
-        padding-top: 0px;
+        padding-top: 20px;
         display: flex;
         align-items: center;
         justify-content: center;    

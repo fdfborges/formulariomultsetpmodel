@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+    width: 90%;
     p{
         font-size: 13px;
         color: #B8B8D4;
@@ -17,11 +18,14 @@ export const Container = styled.div`
         border: 0;
         background-color: #16195;
         margin: 30px 0;
+        @media (max-width: 768px){
+            display: flex;
+            margin: 20px 0;
+        }
     }
 
     label{
         font-size: 13px;
-
     }
         button{
         background-color: #25CD89;
