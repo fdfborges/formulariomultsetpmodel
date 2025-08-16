@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    p{
+display: flex;
+flex-direction: column;
+p{
         font-size: 13px;
         color: #B8B8D4;
     }
@@ -14,9 +16,14 @@ export const Container = styled.div`
 
     hr{
         height: 1px;
-        border: 0;
+        border: none;
         background-color: #16195;
         margin: 30px 0;
+
+        @media (max-width: 768px){
+            margin: 20px 0;
+        }
+
     }
 
     label{

@@ -6,10 +6,12 @@ export const Container = styled.div`
     
     
         @media (max-width: 768px){
-            display: flex;    
+            display: flex;
+            flex: 1;
+            height: 100%
             align-items: center;
-            justify-content: center;
-            border: 1px solid purple;
+            
+            
             gap: 2rem;
             
             .containerLink{
@@ -46,7 +48,6 @@ export const Title = styled.div`
         align-items: center;
         justify-content: center;
         text-align: center;
-        border: 1px solid red;
         
     }
 `;
@@ -61,7 +62,6 @@ export const Description = styled.div`
         align-items: center;
         justify-content: center;
         text-align: center;
-        border: 1px solid red;
         
     }
 

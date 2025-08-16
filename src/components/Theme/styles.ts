@@ -4,6 +4,7 @@ export const Container = styled.div`
     background-color: #02044A;
     color: #FFF;
     min-height: 100vh;
+    padding-top: 3rem;
 `;
 
 export const Area = styled.div`
@@ -33,7 +34,6 @@ export const Sidebar = styled.div`
     @media (max-width: 768px){
         display: flex;
         width: 90%;
-        border: 1px solid red;
     }
 `;
 
@@ -41,4 +41,9 @@ export const Page = styled.div`
     flex: 1;
     padding-left: 40px;
     padding-top: 40px;
+
+    @media (max-width: 768px){
+        padding-left: 0px;
+        padding-top: 0px;
+}
 `;
