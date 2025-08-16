@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    width: 100%;
+
     background-color: #02044A;
     color: #FFF;
     min-height: 100vh;
@@ -34,6 +36,7 @@ export const Sidebar = styled.div`
     @media (max-width: 768px){
         display: flex;
         width: 90%;
+        border: none;
     }
 `;
 
@@ -45,5 +48,8 @@ export const Page = styled.div`
     @media (max-width: 768px){
         padding-left: 0px;
         padding-top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;    
 }
 `;
