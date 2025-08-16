@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+    
+    width: 90%;
     p{
         font-size: 13px;
         color: #B8B8D4;
