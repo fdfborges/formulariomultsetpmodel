@@ -1,14 +1,19 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Essa classe fez as bolinhas do steps pararem de funcionar. Resolver
+// import 'bootstrap/dist/css/bootstrap.min.css'; // Essa classe fez as bolinhas do steps pararem de funcionar. Resolver
 import './styles.css';
+import '../../_bootstrap-custom.scss';
 
 export function Example() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+    function handleReturnPage(){
+      window.location.reload();
+    }
 
   return (
     <>
@@ -19,8 +24,6 @@ export function Example() {
       <Modal
         show={show}
         onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
       >
         <Modal.Header closeButton>
           <Modal.Title>Confirmação</Modal.Title>
@@ -29,7 +32,7 @@ export function Example() {
           Seus dados foram enviados com sucesso!
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={handleReturnPage}>
             Fechar
           </Button>
         </Modal.Footer>

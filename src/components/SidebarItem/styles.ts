@@ -56,6 +56,7 @@ export const Description = styled.div`
     text-align: right;
     font-size: 13px;
     color: #B8B8D4;
+    margin-bottom: 0.6rem;
 
     @media (max-width: 768px){
         display: flex;
