@@ -12,9 +12,14 @@ O formulário simula um processo de cadastro para desenvolvedores, coletando inf
 
 ## 🎨 Demonstração
 
-*(Adicione aqui um GIF ou uma imagem do seu projeto em ação para uma visualização rápida)*
+<!-- Para garantir que a imagem apareça, substitua o link abaixo pela URL completa (raw) da imagem no seu repositório. -->
+<!-- Exemplo:  -->
+![Demo do Projeto](https://raw.githubusercontent.com/seu-usuario/FormularioMultStep/main/public/TelaInicialFormulário.png)
 
-![Demo do Projeto](URL_DO_SEU_GIF_OU_IMAGEM_AQUI)
+## ✨ Funcionalidades Principais
+
+
+
 
 ## ✨ Funcionalidades Principais
 
@@ -61,8 +66,4 @@ Siga os passos abaixo para executar o projeto em sua máquina.
    ```
 
 5. Abra http://localhost:3000 no seu navegador para ver a aplicação.
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
 
