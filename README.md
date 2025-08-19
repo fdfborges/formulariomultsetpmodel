@@ -14,10 +14,7 @@ O formulário simula um processo de cadastro para desenvolvedores, coletando inf
 
 ## 🎨 Demonstração
 
-
-<!-- Para garantir que a imagem apareça, substitua o link abaixo pela URL completa (raw) da imagem no seu repositório. -->
-<!-- Exemplo:  -->
-![Demo do Projeto](https://github.com/fdfborges/formulariomultsetpmodel/blob/main/public/assetsInterno/TelaInicialFormulario.png?raw=true)
+![Demo do Projeto](https://github.com/fdfborges/formulariomultsetpmodel/blob/main/public/assetsInterno/Tela%20Inicial%20Formul%C3%A1rio.png?raw=true)
 
 ## ✨ Funcionalidades Principais
 
