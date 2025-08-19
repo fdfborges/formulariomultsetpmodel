@@ -1,6 +1,7 @@
 import * as C from './styles';
 import { Link } from "react-router-dom"
 
+
 import { ReactComponent as ProfileIcon } from '../../Svgs/profile.svg';
 import { ReactComponent as BookIcon } from '../../Svgs/book.svg';
 import { ReactComponent as MailIcon } from '../../Svgs/mail.svg';
@@ -13,6 +14,7 @@ type Props = {
     path: string;
     active: boolean;
 }
+
 
 export const SidebarItem = ({ title, description, icon, path, active }: Props) => {
     return (

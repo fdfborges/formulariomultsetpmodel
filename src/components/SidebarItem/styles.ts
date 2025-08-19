@@ -4,9 +4,10 @@ export const Container = styled.div`
     margin: 30px 0;
     cursor: pointer;
     
-    
+
         @media (max-width: 768px){
             display: flex;
+            
             flex: 1;
             height: 100%
             align-items: center;
@@ -33,6 +34,8 @@ export const Info = styled.div`
     flex: 1;
     width: 100%
     
+    
+  
 `;
 
 export const Title = styled.div`
@@ -41,6 +44,7 @@ export const Title = styled.div`
     margin-bottom: 5px;
     font-size: 15px;
     color: #FFF;
+    margin-right: 1rem;
 
     @media (max-width: 768px){
         width: 100%;
@@ -48,6 +52,7 @@ export const Title = styled.div`
         align-items: center;
         justify-content: center;
         text-align: center;
+        margin-right: 0rem;
         
     }
 `;
@@ -57,13 +62,14 @@ export const Description = styled.div`
     font-size: 13px;
     color: #B8B8D4;
     margin-bottom: 0.6rem;
+    margin-right: 1rem;
 
     @media (max-width: 768px){
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-        
+        margin-right: 0rem;
     }
 
 `;
