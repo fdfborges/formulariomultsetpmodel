@@ -5,6 +5,7 @@ import { Theme } from '../../components/Theme';
 import { ChangeEvent, useEffect } from 'react';
 import { Resume } from '../../components/Resume';
 import { Steps } from '../../components/Steps/Steps';
+import { ModalFinish } from '../../components/ModalFinish';
 
 
 export const FormStep4 = () => {
@@ -58,6 +59,7 @@ export const FormStep4 = () => {
 
                 <Link className='backButton' to={"/"}>Voltar</Link>
                 <button onClick={handleNextStep}>Enviar</button>
+                <ModalFinish />
 
             </C.Container>
         </Theme>
