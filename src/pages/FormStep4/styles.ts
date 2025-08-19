@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+    
     width: 90%;
     p{
         font-size: 13px;
@@ -45,4 +46,11 @@ export const Container = styled.div`
         padding: 20px 40px;
         color: #B8B8D4;
     }
+`;
+
+export const FooterForm = styled.div`
+    display: flex;
+    align-items: center;
+
+
 `;
