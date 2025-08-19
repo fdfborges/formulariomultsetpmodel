@@ -10,23 +10,22 @@ Este é um projeto de um formulário com múltiplas etapas, desenvolvido como pa
 
 O formulário simula um processo de cadastro para desenvolvedores, coletando informações pessoais e profissionais em passos distintos, proporcionando uma experiência de usuário mais fluida e organizada.
 
+## [🏃 Acesse o Projeto Ao Vivo](https://formulariomultsetpmodel.vercel.app/)
+
 ## 🎨 Demonstração
+
 
 <!-- Para garantir que a imagem apareça, substitua o link abaixo pela URL completa (raw) da imagem no seu repositório. -->
 <!-- Exemplo:  -->
-![Demo do Projeto](https://raw.githubusercontent.com/seu-usuario/FormularioMultStep/main/public/TelaInicialFormulário.png)
+![Demo do Projeto](https://github.com/fdfborges/formulariomultsetpmodel/blob/main/public/assetsInterno/TelaInicialFormulario.png?raw=true)
 
 ## ✨ Funcionalidades Principais
 
-
-
-
-## ✨ Funcionalidades Principais
 
 - **Navegação Intuitiva:** Avance e retorne entre as diferentes etapas do formulário de maneira simples.
 - **Gerenciamento de Estado Global:** Utilização de Hooks do React (Context API) para gerenciar os dados do formulário de forma centralizada e eficiente.
 - **Componentização:** Estrutura de componentes bem definida, seguindo os princípios de reutilização e responsabilidade única.
-- **Estilização Moderna:** Construído com **Styled Components** para um CSS-in-JS escopado, dinâmico e de fácil manutenção.
+- **Estilização Moderna e Responsiva:** Construído com **Styled Components** para um CSS-in-JS escopado, dinâmico e de fácil manutenção.
 - **TypeScript:** Código fortemente tipado para garantir maior segurança, legibilidade e facilitar a manutenção futura.
 - **Foco em Acessibilidade:** O projeto inclui `axe-core`, demonstrando uma preocupação com a criação de interfaces acessíveis para todos os usuários.
 
